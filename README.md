@@ -1,6 +1,7 @@
 # simple_shell
 
 ![shell](https://camo.githubusercontent.com/8888ae74076afce3ac6d78de0bba2c9c2039412ed8f51d33b5e3a61712cf2406/68747470733a2f2f63646e2e73686f706966792e636f6d2f732f66696c65732f312f303230342f343130342f70726f64756374732f32303138303531372d32303138303531372d50313236303631345f363030782e6a70673f763d31353238353036333538)
+---
 
 ## Repository Description
 
@@ -11,6 +12,9 @@
 **This simple shell is a Shell interface written in C programming language that gives to the user a prompt *hsh>> *, after it accepts, it executes a user inputted command in a separate process called child process.**
 
 ![c](https://camo.githubusercontent.com/4f0a611698513d0e276aa4bf9345ffe9fa05197036105d372e2d88ade23fc135/68747470733a2f2f7365656b6c6f676f2e636f6d2f696d616765732f432f632d70726f6772616d6d696e672d6c616e67756167652d6c6f676f2d394233324430313742312d7365656b6c6f676f2e636f6d2e706e67)
+--- 
+
+## General. 
 
 * Allowed editors: vi, vim, emacs
 * All your files will be compiled on Ubuntu 14.04 LTS
@@ -22,7 +26,7 @@
 * No more than 5 functions per file
 * All your header files should be include guarded
 
-### Process Description
+## Process Description
 1. First, the parent process is created when the user run the program.
 2. Then, the isatty() function using STDIN_FILENO file descriptor -fd- to tests if there is an open file descriptor referring to a terminal. If isatty() returns 1, the prompt is showed using write() with STDOUT_FILENO as fd and waits for an input user command line.
 3. When the user types a command, getline() function reads an entire line from the stream and strtok() function breaks the inputted command into a sequence of non-empty tokens.
