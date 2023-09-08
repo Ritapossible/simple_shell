@@ -35,6 +35,12 @@
 5. After tokening the command, execve() function brings and executes it, the it frees all allocated memory with free().
 6. Finally, the program returns to main process: prints the prompt, and waits for another user input.
 
+<<<<<<< HEAD
 ## Flowchart Description (How it Works)`
 
 ![image](https://github.com/Ritapossible/simple_shell/assets/124313160/c7b4be67-9d5d-4d1b-9867-4e19e7865224)
+=======
+## Flowchart Description (How it Works)
+
+
+>>>>>>> Readme updated
