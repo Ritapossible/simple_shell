@@ -11,6 +11,7 @@
 
 **This simple shell is a Shell interface written in C programming language that gives to the user a prompt *hsh>> *, after it accepts, it executes a user inputted command in a separate process called child process.**
 
+
 ![c](https://camo.githubusercontent.com/4f0a611698513d0e276aa4bf9345ffe9fa05197036105d372e2d88ade23fc135/68747470733a2f2f7365656b6c6f676f2e636f6d2f696d616765732f432f632d70726f6772616d6d696e672d6c616e67756167652d6c6f676f2d394233324430313742312d7365656b6c6f676f2e636f6d2e706e67)
 --- 
 
