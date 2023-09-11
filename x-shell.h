@@ -125,9 +125,9 @@ int x_strlen(const char *str_x);
 /* x_str3.c */
 void rev_string(char *str_x);
 
-/* x-shell_loop.c */
+/* x_shell_loop.c */
 char *without_comment(char *in_x);
-void x-shell_loop(data_shell *datash);
+void x_shell_loop(data_shell *datash);
 
 /* x-shell-check_syntax_error.c */
 int repeated_char(char *input_x, int i);
