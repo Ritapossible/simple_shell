@@ -116,7 +116,7 @@ char **x_reallocdp(char **ptr_x, unsigned int x-old_size, unsigned int x-new_siz
 void x_memcpy(void *x-newptr, const void *ptr_x, unsigned int x_size);
 
 /* x_str2.c */
-int x-cmp_chars(char str[], const char *delim_x);
+int x_cmp_chars(char str[], const char *delim_x);
 char *x_strtok(char str[], const char *delim_x);
 int x_isdigit(const char *str_x);
 char *x_strdup(const char *str_x);
