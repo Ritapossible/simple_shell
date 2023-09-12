@@ -124,4 +124,27 @@ char *str_concat(char *string1, char *string2);
 /* Reverse a string */
 void str_reverse(char *string);
 
+
+/* Cast from int to string */
+void long_to_string(long number, char *string, int base);
+
+/* convert an string in to a number */
+int _atoi(char *s);
+
+/* count the coincidences of character in string */
+int count_characters(char *string, char *character);
+
+/*======== expansions.c ========*/
+
+/* expand variables */
+void expand_variables(my_program_info *data);
+
+/* expand aliases */
+void expand_alias(my_program_info *data);
+
+/* append the string to the end of the buffer*/
+int buffer_add(char *buffer, char *str_to_add);
+
+int execute(my_program_info *data);
+
 #endif /* SHELL_H */

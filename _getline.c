@@ -25,7 +25,7 @@ int _getline(my_program_info *data)
 			array_commands[i] = NULL;
 		}
 
-		/* read from the file descriptor into  buff */
+		/* read from the file descriptor int to buff */
 		bytes_read = read(data->file_des, &buff, BUFFER_SIZE - 1);
 		if (bytes_read == 0)
 			return (-1);

@@ -57,7 +57,7 @@ void inicialize_data(my_program_info *data, int argc, char *argv[], char **env)
 	else
 	{
 		data->file_des = open(argv[1], O_RDONLY);
-		if (data->file_descriptor == -1)
+		if (data->file_des == -1)
 		{
 			_printe(data->program_name);
 			_printe(": 0: Can't open ");
