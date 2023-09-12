@@ -147,4 +147,19 @@ int buffer_add(char *buffer, char *str_to_add);
 
 int execute(my_program_info *data);
 
+char *_strtok(char *line, char *delim);
+
+
+/*=== env_manage.c ===*/
+
+/* Gets the value of an environment variable */
+char *env_get_key(char *name, my_program_info *data);
+
+/* Overwrite the value of the environment variable */
+int env_set_key(char *key, char *value, my_program_info *data);
+
+/* Remove a key from the environment */
+int env_remove_key(char *key, my_program_info *data);
+
+
 #endif /* SHELL_H */
