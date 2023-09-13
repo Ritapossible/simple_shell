@@ -30,7 +30,7 @@ extern char **enviro;
 typedef struct data
 {
 	char **argv;
-	char *input;
+	char *input_x;
 	char **args;
 	int status;
 	int counter_x;
@@ -210,7 +210,7 @@ char *error_permission(char **args);
 char *error_path_126(data_shell *datash);
 
 /* get_x_error.c */
-int get_x_error(data_shell *datash, int e-x-val);
+int get_x_error(data_shell *datash, int e_x_val);
 
 /* get_x_sigint.c */
 void get_x_sigint(int x_sig);
