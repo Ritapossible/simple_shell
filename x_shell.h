@@ -1,5 +1,5 @@
-#ifndef _X-SHELL_H_
-#define _X-SHELL_H_
+#ifndef _X_SHELL_H_
+#define _X_SHELL_H_
 
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -12,19 +12,19 @@
 #include <errno.h>
 #include <fcntl.h>
 
-/* The below prototype points to an array of pointers to strings named the "environment" */
+/* Below prototype points to an array of ptr to strs named the "environment" */
 
 extern char **enviro;
 
 /**
  * struct data - The structure which contains all relevant data on the runtime
  * @argv: Argument vector
- * @input: The ommand line written by the user.
+ * @input_x: The ommand line written by the user.
  * @args: The tokens of the command line.
- * @status: The last status of the x-shell.
+ * @status: The last status of the x_shell.
  * @counter_x: The lines counter.
  * @_enviro: The environment variable.
- * @pid: The process ID of the x-shell.
+ * @pid: The process ID of the x_shell.
  */
 
 typedef struct data
@@ -36,7 +36,7 @@ typedef struct data
 	int counter_x;
 	char **_enviro;
 	char *pid;
-} data_shell
+} data_shell;
 
 /**
  * struct sep_list_s - Single linked list.
@@ -101,7 +101,7 @@ void free_sep_list(sep_list **head);
 
 /* x_lists2.c */
 void free_rvar_list(r_var **head);
-r_var *add_rvar_node(r_var **head, int 1xvar, char *xvar, int lxval);
+r_var *add_rvar_node(r_var **head, int 1_xvar, char *xvar, int l_xval);
 
 /* x_str functions prototype */
 char *x_strcat(char *dest_x, const char *src_x);
@@ -111,9 +111,9 @@ char *x_strchr(char *s_x, char c_x);
 int x_strspn(char *s_x, char *accept_x);
 
 /* x_mem.c */
-void *x_realloc(void *ptr_x, unsigned int x-old_size, unsigned int x-new_size);
-char **x_reallocdp(char **ptr_x, unsigned int x-old_size, unsigned int x-new_size);
-void x_memcpy(void *x-newptr, const void *ptr_x, unsigned int x_size);
+void *x_realloc(void *ptr_x, unsigned int x_old_sz, unsigned int x_new_sz);
+char **x_reallocdp(char **ptr_x, unsigned int x_old_sz, unsigned int x_new_sz);
+void x_memcpy(void *x_newptr, const void *ptr_x, unsigned int x_size);
 
 /* x_str2.c */
 int x_cmp_chars(char str[], const char *delim_x);
@@ -152,15 +152,15 @@ int check_vars(r_var **head, char *in, char *str, data_shell *data);
 char *replaced_input(r_var **head, char *input_x, char *xnew_input, int xlen);
 char *rep_var(char *input_x, data_shell *datash);
 
-/* x-get_line.c */
+/* x_get_line.c */
 void bring_line(char **lineptr_x, size_t *i, char *buffer, size_t j);
 ssize_t get_line(char **lineptr_x, size_t *i, FILE *stream);
 
-/* exec-x_line */
+/* exec_x_line */
 int exec_line(data_shell *datash);
 
 /* cmd_exec_x.c */
-int is_cdir(char *x-path, int *i);
+int is_cdir(char *x_path, int *i);
 char *_which(char *cmd_x, char **_enviro);
 int is_executable(data_shell *datash);
 int check_error_cmd(char *x_dir, data_shell *datash);
@@ -171,8 +171,8 @@ char *_getenv(const char *name, char **_enviro);
 int _env(data_shell *datash);
 
 /* x_env2.c */
-char *copy_info(char *name, char *x-value);
-void set_env(char *name, char *x-value, data_shell *datash);
+char *copy_info(char *name, char *x_value);
+void set_env(char *name, char *x_value, data_shell *datash);
 int _setenv(data_shell *datash);
 int _unsetenv(data_shell *datash);
 
@@ -186,7 +186,7 @@ void cd_to_home(data_shell *datash);
 int cd_x_shell(data_shell *datash);
 
 /* get_x_builtin */
-int (*get_x_builtin(char *cmd-x))(data_shell *datash);
+int (*get_x_builtin(char *cmd_x))(data_shell *datash);
 
 /* x_exit.c */
 int exit_x_shell(data_shell *datash);
