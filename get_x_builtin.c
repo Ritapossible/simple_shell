@@ -1,11 +1,11 @@
-#include "x-shell.h"
+#include "x_shell.h"
 
 /**
  * get_x_builtin - The builtin that pass the command in the argument.
- * @cmd-x: The x command.
+ * @cmd_x: The x command.
  * Return: The function pointer of the builtin command.
  */
-int (*get_x_builtin(char *cmd-x))(data_shell *)
+int (*get_x_builtin(char *cmd_x))(data_shell *)
 {
 	builtin_t builtin[] = {
 		{ "env", _env },
@@ -20,7 +20,7 @@ int (*get_x_builtin(char *cmd-x))(data_shell *)
 
 	for (j= 0; builtin[j].name_x; j++)
 	{
-		if (_strcmp(builtin[j].name_x, cmd-x) == 0)
+		if (x_strcmp(builtin[j].name_x, cmd_x) == 0)
 			break;
 	}
 
