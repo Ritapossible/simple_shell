@@ -1,4 +1,4 @@
-#include "x-shell.h"
+#include "x_shell.h"
 
 /**
  * free_data - Frees the data struct.
@@ -45,7 +45,7 @@ void set_data(data_shell *datash, char **argv)
 
 	for (i = 0; enviro[j]; j++)
 	{
-		datash->_enviro[j] = _strdup(enviro[j]);
+		datash->_enviro[j] = x_strdup(enviro[j]);
 	}
 
 	datash->_enviro[j] = NULL;
