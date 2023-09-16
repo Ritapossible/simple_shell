@@ -1,4 +1,4 @@
-#include "x-shell.h"
+#include "x_shell.h"
 
 /**
  * exit_x_shell - Exits the x shell.
@@ -23,10 +23,10 @@ int exit_x_shell(data_shell *datash)
 		if (!x_digit || x_str_len > 10 || large_number)
 		{
 			get_x_error(datash, 2);
-			datash->status = 2;
+			datash->x_status = 2;
 			return (1);
 		}
-		datash->status = (x_status % 256);
+		datash->x_status = (x_status % 256);
 	}
 	return (0);
 }
