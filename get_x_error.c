@@ -1,4 +1,4 @@
-#include "x-shell.h"
+#include "x_shell.h"
 
 /**
  * get_x_error - Gets/calls error according the builtin, syntax or permission.
