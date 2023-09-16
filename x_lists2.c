@@ -1,15 +1,15 @@
-#include "x-shell.h"
+#include "x_shell.h"
 
 /**
  * add_rvar_node - This helps to add a variable at the end
  * of a r_var list.
  * @head: The head of the linked list.
- * @lxvar: The length of the variable.
+ * @l_xvar: The length of the variable.
  * @xval: The value of the variable.
- * @lxval: The length of the value.
+ * @l_xval: The length of the value.
  * Return: Always return address of the head.
  */
-r_var *add_rvar_node(r_var **head, int lxvar, char *xval, int lxval)
+r_var *add_rvar_node(r_var **head, int l_xvar, char *xval, int l_xval)
 {
 	r_var *new_x, *temp;
 
@@ -17,9 +17,9 @@ r_var *add_rvar_node(r_var **head, int lxvar, char *xval, int lxval)
 	if (new_x == NULL)
 		return (NULL);
 
-	new_x->length_var = lxvar;
+	new_x->length_var = l_xvar;
 	new_x->value = value;
-	new_x->length_val = lxval;
+	new_x->length_val = l_xval;
 
 	new_x->next = NULL;
 	temp = *head;
