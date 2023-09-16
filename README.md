@@ -37,4 +37,8 @@
 
 ## Flowchart Description (How it Works)
 
+<<<<<<< HEAD
 
+=======
+![image](https://github.com/Ritapossible/simple_shell/assets/124313160/c7b4be67-9d5d-4d1b-9867-4e19e7865224)
+>>>>>>> bb8b2f87ee4fa841e5b89949868731b61d09e6a1
