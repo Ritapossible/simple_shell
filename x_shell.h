@@ -129,17 +129,17 @@ void rev_string(char *str_x);
 char *without_comment(char *in_x);
 void x_shell_loop(data_shell *datash);
 
-/* x-shell-check_syntax_error.c */
+/*=== x-shell-check_syntax_error.c ===*/
 int repeated_char(char *input_x, int i);
 int error_sep_op(char *input_x, int i, char last_x);
 int first_char(char *input_x, int *i);
 void print_syntax_error(data_shell *datash, char *input_x, int i, int bool_x);
 int check_syntax_error(data_shell *datash, char *input_x);
 
-/* read_x_line.c */
+/*=== read_x_line.c ===*/
 char *read_line(int *x_eof);
 
-/* split_x.c */
+/*=== split_x.c ===*/
 char *swap_char(char *input_x, int bool_x);
 void add_nodes(sep_list **head_x, line_list **head_l, char *input_x);
 void go_next(sep_list **list_x, line_list **list_l, data_shell *datash);
@@ -152,11 +152,11 @@ int check_vars(r_var **head, char *in, char *str, data_shell *data);
 char *replaced_input(r_var **head, char *input_x, char *xnew_input, int xlen);
 char *rep_var(char *input_x, data_shell *datash);
 
-/* x_get_line.c */
+/*==== x_get_line.c === */
 void bring_line(char **lineptr_x, size_t *i, char *buffer, size_t j);
 ssize_t get_line(char **lineptr_x, size_t *i, FILE *stream);
 
-/* exec_x_line */
+/*=== exec_x_line ====*/
 int exec_line(data_shell *datash);
 
 /* cmd_exec_x.c */
@@ -222,7 +222,7 @@ void x_help_unsetenv(void);
 void x_help_general(void);
 void x_help_exit(void);
 
-/* x_help2.c */
+/*===x_help2.c ===*/
 void x_help(void);
 void x_help_alias(void);
 void x_help_cd(void);
@@ -230,5 +230,5 @@ void x_help_cd(void);
 /* get_x_help.c */
 int get_x_help(data_shell *datash);
 
-#endif
+#endif /* ===shell.h header file ===*/
 
