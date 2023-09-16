@@ -1,4 +1,4 @@
-#include "x-shell.h"
+#include "x_shell.h"
 
 /**
  * get_x_sigint - Handles the crtl + c call in prompt.
