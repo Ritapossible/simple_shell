@@ -1,4 +1,4 @@
-#include "x-shell.h"
+#include "x_shell.h"
 
 /**
  * cd_dot - To change to the current parent directory.
@@ -14,16 +14,16 @@ void cd_dot(data_shell *datash)
 	char *x_dir, *cp_pwd, *cp_strtok_pwd;
 
 	getcwd(pwd, sizeof(pwd));
-	cp_pwd = _strdup(pwd);
+	cp_pwd = x_strdup(pwd);
 	set_env("OLDPWD", cp_pwd, datash);
 	x_dir = datash->args[1];
-	if (_strcmp(".", x_dir) == 0)
+	if (x_strcmp(".", x_dir) == 0)
 	{
 		set_env("PWD", cp_pwd, datash);
 		free(cp_pwd);
 		return;
 	}
-	if (_strcmp("/", cp_pwd) == 0)
+	if (x_strcmp("/", cp_pwd) == 0)
 	{
 		free(cp_pwd);
 		return;
@@ -33,7 +33,7 @@ void cd_dot(data_shell *datash)
 	cp_strtok_pwd = _strtok(cp_strtok_pwd, "/");
 	if (cp_strtok_pwd != NULL)
 	{
-		cp_strtok_pwd = _strtok(NULL, "\0");
+		cp_strtok_pwd = x_strtok(NULL, "\0");
 
 		if (cp_strtok_pwd != NULL)
 			rev_string(cp_strtok_pwd);
@@ -74,7 +74,7 @@ void cd_to(data_shell *datash)
 		return;
 	}
 
-	cp_pwd = _strdup(pwd);
+	cp_pwd = x_strdup(pwd);
 	set_env("OLDPWD", cp_pwd, datash);
 
 	cp_dir = _strdup(x_dir);
@@ -100,14 +100,14 @@ void cd_previous(data_shell *datash)
 	char *p_pwd, *p_oldpwd, *cp_pwd, *cp_oldpwd;
 
 	getcwd(pwd, sizeof(pwd));
-	cp_pwd = _strdup(pwd);
+	cp_pwd = x_strdup(pwd);
 
 	p_oldpwd = _getenv("OLDPWD", datash->_enviro);
 
 	if (p_oldpwd == NULL)
 		cp_oldpwd = cp_pwd;
 	else
-		cp_oldpwd = _strdup(p_oldpwd);
+		cp_oldpwd = x_strdup(p_oldpwd);
 
 	set_env("OLDPWD", cp_pwd, datash);
 
@@ -118,7 +118,7 @@ void cd_previous(data_shell *datash)
 
 	p_pwd = _getenv("PWD", datash->_enviro);
 
-	write(STDOUT_FILENO, p_pwd, _strlen(p_pwd));
+	write(STDOUT_FILENO, p_pwd, x_strlen(p_pwd));
 	write(STDOUT_FILENO, "\n", 1);
 
 	free(cp_pwd);
@@ -142,7 +142,7 @@ void cd_to_home(data_shell *datash)
 	char pwd[PATH_MAX];
 
 	getcwd(pwd, sizeof(pwd));
-	p_pwd = _strdup(pwd);
+	p_pwd = x_strdup(pwd);
 
 	home = _getenv("HOME", datash->_enviro);
 
