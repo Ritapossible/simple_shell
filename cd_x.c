@@ -30,7 +30,7 @@ void cd_dot(data_shell *datash)
 	}
 	cp_strtok_pwd = cp_pwd;
 	rev_string(cp_strtok_pwd);
-	cp_strtok_pwd = _strtok(cp_strtok_pwd, "/");
+	cp_strtok_pwd = x_strtok(cp_strtok_pwd, "/");
 	if (cp_strtok_pwd != NULL)
 	{
 		cp_strtok_pwd = x_strtok(NULL, "\0");
