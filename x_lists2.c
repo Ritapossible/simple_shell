@@ -18,10 +18,10 @@ r_var *add_rvar_node(r_var **head, int len_var, char *xval, int l_xval)
 		return (NULL);
 
 	ptrn->length_var = len_var;
-	ptrn->value = value;
+	ptrn->xval = xval;
 	ptrn->length_val = l_xval;
 
-	new_x->next = NULL;
+	ptrn->next = NULL;
 	temp = *head;
 
 	if (temp == NULL)
