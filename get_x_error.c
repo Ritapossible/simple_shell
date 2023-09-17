@@ -3,25 +3,24 @@
 /**
  * get_x_error - Gets/calls error according the builtin, syntax or permission.
  * @datash: The data structure that contains the arguments.
- * @e_x_val: The x shell error value.
+ * @err_val: The x shell error value.
  * Return: Always return error.
  */
 
-int get_x_error(data_shell *datash, int e_x_val)
+int get_x_error(data_shell *datash, int err_val)
 {
 	char *x_error = NULL;
-	int e_x_val;
 
-	if (e_x_val == -1)
+	if (err_val == -1)
 	{
 		x_error = error_env(datash);
-	} else if (e_x_val == 126)
+	} else if (err_val == 126)
 	{
 		x_error = error_path_126(datash);
-	} else if (e_x_val == 127)
+	} else if (err_val == 127)
 	{
 		x_error = error_not_found(datash);
-	} else if (e_x_val == 2)
+	} else if (err_val == 2)
 	{
 		if (x_strcmp("exit", datash->args[0]) == 0)
 		{
@@ -37,6 +36,6 @@ int get_x_error(data_shell *datash, int e_x_val)
 		free(x_error);
 	}
 
-	datash->status = e_x_val;
-	return (e_x_val);
+	datash->status = err_val;
+	return (err_val);
 }
