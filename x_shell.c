@@ -43,7 +43,7 @@ void set_data(data_shell *datash, char **argv)
 
 	datash->_enviro = malloc(sizeof(char *) * (j + 1));
 
-	for (i = 0; enviro[j]; j++)
+	for (j = 0; enviro[j]; j++)
 	{
 		datash->_enviro[j] = x_strdup(enviro[j]);
 	}
