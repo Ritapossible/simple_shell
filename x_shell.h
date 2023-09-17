@@ -101,7 +101,7 @@ void free_sep_list(sep_list **head);
 
 /* x_lists2.c */
 void free_rvar_list(r_var **head);
-r_var *add_rvar_node(r_var **head, int 1_xvar, char *xvar, int l_xval);
+r_var *add_rvar_node(r_var **head, int len_var, char *xvar, int l_xval);
 
 /* x_str functions prototype */
 char *x_strcat(char *dest_x, const char *src_x);
@@ -129,17 +129,17 @@ void rev_string(char *str_x);
 char *without_comment(char *in_x);
 void x_shell_loop(data_shell *datash);
 
-/*=== x-shell-check_syntax_error.c ===*/
+/* x-shell-check_syntax_error.c */
 int repeated_char(char *input_x, int i);
 int error_sep_op(char *input_x, int i, char last_x);
 int first_char(char *input_x, int *i);
 void print_syntax_error(data_shell *datash, char *input_x, int i, int bool_x);
 int check_syntax_error(data_shell *datash, char *input_x);
 
-/*=== read_x_line.c ===*/
+/* read_x_line.c */
 char *read_line(int *x_eof);
 
-/*=== split_x.c ===*/
+/* split_x.c */
 char *swap_char(char *input_x, int bool_x);
 void add_nodes(sep_list **head_x, line_list **head_l, char *input_x);
 void go_next(sep_list **list_x, line_list **list_l, data_shell *datash);
@@ -152,11 +152,11 @@ int check_vars(r_var **head, char *in, char *str, data_shell *data);
 char *replaced_input(r_var **head, char *input_x, char *xnew_input, int xlen);
 char *rep_var(char *input_x, data_shell *datash);
 
-/*==== x_get_line.c === */
-void bring_line(char **lineptr_x, size_t *i, char *buffer, size_t j);
+/* x_get_line.c */
+void bring_line(char **lineptr_x, size_t *i, char *buffer, size_t i);
 ssize_t get_line(char **lineptr_x, size_t *i, FILE *stream);
 
-/*=== exec_x_line ====*/
+/* exec_x_line */
 int exec_line(data_shell *datash);
 
 /* cmd_exec_x.c */
@@ -194,7 +194,7 @@ int exit_x_shell(data_shell *datash);
 /* x_stdlib.c */
 int get_x_len(int i);
 char *x_itoa(int i);
-int _atoi(char *x);
+int x_atoi(char *x);
 
 /* x_error1.c */
 char *strcat_cd(data_shell *, char *, char *, char *);
@@ -210,7 +210,7 @@ char *error_permission(char **args);
 char *error_path_126(data_shell *datash);
 
 /* get_x_error.c */
-int get_x_error(data_shell *datash, int e_x_val);
+int get_x_error(data_shell *datash, int err_val);
 
 /* get_x_sigint.c */
 void get_x_sigint(int x_sig);
@@ -222,7 +222,7 @@ void x_help_unsetenv(void);
 void x_help_general(void);
 void x_help_exit(void);
 
-/*===x_help2.c ===*/
+/* x_help2.c */
 void x_help(void);
 void x_help_alias(void);
 void x_help_cd(void);
@@ -230,5 +230,5 @@ void x_help_cd(void);
 /* get_x_help.c */
 int get_x_help(data_shell *datash);
 
-#endif /* ===shell.h header file ===*/
+#endif /* x_shell.h header file */
 
