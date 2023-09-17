@@ -101,7 +101,7 @@ void free_sep_list(sep_list **head);
 
 /* x_lists2.c */
 void free_rvar_list(r_var **head);
-r_var *add_rvar_node(r_var **head, int len_var, char *xvar, int l_xval);
+r_var *add_rvar_node(r_var **head, int len_var, char *xval, int l_xval);
 
 /* x_str functions prototype */
 char *x_strcat(char *dest_x, const char *src_x);
@@ -153,7 +153,7 @@ char *replaced_input(r_var **head, char *input_x, char *xnew_input, int xlen);
 char *rep_var(char *input_x, data_shell *datash);
 
 /* x_get_line.c */
-void bring_line(char **lineptr_x, size_t *i, char *buffer, size_t i);
+void bring_line(char **lineptr_x, size_t *i, char *buffer, size_t j);
 ssize_t get_line(char **lineptr_x, size_t *i, FILE *stream);
 
 /* exec_x_line */
