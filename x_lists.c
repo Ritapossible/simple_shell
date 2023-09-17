@@ -16,7 +16,7 @@ sep_list *add_sep_node_end(sep_list **head, char sep_x)
 	if (ptrn == NULL)
 		return (NULL);
 
-	ptrn->separator = sep_x;
+	ptrn->separator_x = sep_x;
 	ptrn->next = NULL;
 	temp = *head;
 
