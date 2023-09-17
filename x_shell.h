@@ -67,7 +67,7 @@ typedef struct line_list_s
 /**
  * struct r_var_list - Single linked list.
  * @len_xvar: Length of the variable.
- * @val_x: Value of the variable.
+ * @xval: Value of the variable.
  * @len_xval: Length of the value.
  * @next: Next node.
  * Description_x: Single linked list to the store variables.
@@ -76,7 +76,7 @@ typedef struct line_list_s
 typedef struct r_var_list
 {
 	int len_xvar;
-	char *val_x;
+	char *xval;
 	int len_xval;
 	struct r_var_list *next;
 } r_var;
@@ -129,7 +129,7 @@ void rev_string(char *str_x);
 char *without_comment(char *in_x);
 void x_shell_loop(data_shell *datash);
 
-/* x-shell-check_syntax_error.c */
+/* x_shell_check_syntax_error.c */
 int repeated_char(char *input_x, int i);
 int error_sep_op(char *input_x, int i, char last_x);
 int first_char(char *input_x, int *i);

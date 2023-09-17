@@ -1,4 +1,5 @@
 #include "x_shell.h"
+#include <string.h>
 
 /**
  * add_rvar_node - This helps to add a variable at the end
@@ -18,7 +19,7 @@ r_var *add_rvar_node(r_var **head, int len_var, char *xval, int l_xval)
 		return (NULL);
 
 	ptrn->len_xvar = len_var;
-	ptrn->xval = xval;
+	ptrn->xval = strdup(xval);
 	ptrn->len_xval = l_xval;
 
 	ptrn->next = NULL;
