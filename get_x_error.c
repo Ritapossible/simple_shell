@@ -27,7 +27,7 @@ int get_x_error(data_shell *datash, int err_val)
 			x_error = error_exit_x_shell(datash);
 		} else if (x_strcmp("cd", datash->args[0]) == 0)
 		{
-			x_error = error_get_cd(datash)
+			x_error = error_get_cd(datash);
 		}
 	}
 	if (x_error)
