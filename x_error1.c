@@ -51,7 +51,7 @@ char *error_get_cd(data_shell *datash)
 	int len, length_id;
 	char *x_error, *ver_x_str, *msg;
 
-	ver_x_str = x_itoa(datash->counter);
+	ver_x_str = x_itoa(datash->counter_x);
 	if (datash->args[1][0] == '-')
 	{
 		msg = ": Illegal option ";
@@ -92,9 +92,9 @@ char *error_not_found(data_shell *datash)
 	char *x_error;
 	char *ver_x_str;
 
-	ver_x_str = x_itoa(datash->counter);
-	len = x__strlen(datash->argv[0]) + x__strlen(ver_x_str);
-	len += x__strlen(datash->args[0]) + 16;
+	ver_x_str = x_itoa(datash->counter_x);
+	len = x_strlen(datash->argv[0]) + x_strlen(ver_x_str);
+	len += x_strlen(datash->args[0]) + 16;
 	x_error = malloc(sizeof(char) * (len + 1));
 	if (x_error == 0)
 	{
@@ -102,13 +102,13 @@ char *error_not_found(data_shell *datash)
 		free(ver_x_str);
 		return (NULL);
 	}
-	x__strcpy(x_error, datash->argv[0]);
-	x__strcat(x_error, ": ");
-	x__strcat(x_error, ver_x_str);
-	x__strcat(x_error, ": ");
-	x__strcat(x_error, datash->args[0]);
-	x__strcat(x_error, ": not found\n");
-	x__strcat(x_error, "\0");
+	x_strcpy(x_error, datash->argv[0]);
+	x_strcat(x_error, ": ");
+	x_strcat(x_error, ver_x_str);
+	x_strcat(x_error, ": ");
+	x_strcat(x_error, datash->args[0]);
+	x_strcat(x_error, ": not found\n");
+	x_strcat(x_error, "\0");
 	free(ver_x_str);
 	return (x_error);
 }
@@ -126,7 +126,7 @@ char *error_exit_x_shell(data_shell *datash)
 	char *x_error;
 	char *ver_x_str;
 
-	ver_x_str = x_itoa(datash->counter);
+	ver_x_str = x_itoa(datash->counter_x);
 	len = x_strlen(datash->argv[0]) + x_strlen(ver_x_str);
 	len += x_strlen(datash->args[0]) + x_strlen(datash->args[1]) + 23;
 	x_error = malloc(sizeof(char) * (len + 1));
