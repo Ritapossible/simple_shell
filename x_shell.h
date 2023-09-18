@@ -103,7 +103,7 @@ void free_sep_list(sep_list **head);
 void free_rvar_list(r_var **head);
 r_var *add_rvar_node(r_var **head, int len_var, char *xval, int l_xval);
 
-/* x_str functions prototype */
+/* x_str.c Functions prototype */
 char *x_strcat(char *dest_x, const char *src_x);
 char *x_strcpy(char *dest_x, char *src_x);
 int x_strcmp(char *s1_x, char *s2_x);
@@ -169,6 +169,7 @@ int cmd_exec(data_shell *datash);
 /* x_env1.c */
 char *_getenv(const char *name, char **_enviro);
 int _env(data_shell *datash);
+int cmp_env_name(const char *env_name, const char *name);
 
 /* x_env2.c */
 char *copy_info(char *name, char *x_value);
