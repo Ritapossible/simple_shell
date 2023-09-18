@@ -170,4 +170,33 @@ int find_program(my_program_info *data);
 /* If match a builtin, executes it */
 int builtins_list(my_program_info *data);
 
+/*======== builtins_more.c ========*/
+
+/* Close the shell */
+int builtin_exit(my_program_info *data);
+
+/* Change the current directory */
+int builtin_cd(my_program_info *data);
+
+/* set the work directory */
+int set_work_directory(my_program_info *data, char *new_dir);
+
+/* show help information */
+int builtin_help(my_program_info *data);
+
+/* set, unset and show alias */
+int builtin_alias(my_program_info *data);
+
+/*======== builtins_env.c ========*/
+
+/* Shows the environment where the shell runs */
+int builtin_env(my_program_info *data);
+
+/* create or override a variable of environment */
+int builtin_set_env(my_program_info *data);
+
+/* delete a variable of environment */
+int builtin_unset_env(my_program_info *data);
+
+
 #endif /* SHELL_H */
