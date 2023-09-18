@@ -1,0 +1,22 @@
+#include "x_shell.h"
+
+/**
+ * exec_line - This looks for  builtins and commands.
+ *
+ * @datash: The data relevant (args).
+ * Return: Always return 1 on success.
+ */
+int exec_line(data_shell *datash)
+{
+	int (*xbuiltin)(data_shell *datash);
+
+	if (datash->args[0] == NULL)
+		return (1);
+
+	xbuiltin = get_x_builtin(datash->args[0]);
+
+	if (xbuiltin != NULL)
+		return (xbuiltin(datash));
+
+	return (cmd_exec(datash));
+}
