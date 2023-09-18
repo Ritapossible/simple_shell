@@ -161,6 +161,9 @@ int env_set_key(char *key, char *value, my_program_info *data);
 /* Remove a key from the environment */
 int env_remove_key(char *key, my_program_info *data);
 
+/* prints the current environ */
+void print_environ(my_program_info *data);
+
 /* Creates an array of the path directories */
 char **tokenize_path(my_program_info *data);
 
