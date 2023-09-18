@@ -55,7 +55,7 @@ typedef struct builtins
 
 /** my_getline.c */
 
-/* Read one line of the standar input*/
+/* Read one line of the standard input*/
 int _getline(my_program_info *data);
 
 /* split the each line for the logical operators if it exist */
@@ -167,6 +167,7 @@ char **tokenize_path(my_program_info *data);
 /* Search for program in path */
 int find_program(my_program_info *data);
 
-
+/* If match a builtin, executes it */
+int builtins_list(my_program_info *data);
 
 #endif /* SHELL_H */
