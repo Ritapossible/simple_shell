@@ -18,7 +18,7 @@ int (*get_x_builtin(char *cmd_x))(data_shell *)
 	};
 	int j;
 
-	for (j= 0; builtin[j].name_x; j++)
+	for (j = 0; builtin[j].name_x; j++)
 	{
 		if (x_strcmp(builtin[j].name_x, cmd_x) == 0)
 			break;
