@@ -58,7 +58,7 @@ void *x_realloc(void *ptr_x, unsigned int x_old_sz, unsigned int x_new_sz)
 }
 
 /**
- * x__reallocdp - This helps to reallocate a memory block of a double pointer.
+ * x_reallocdp - This helps to reallocate a memory block of a double pointer.
  * @ptr_x: The double ptr to the memory previously allocated.
  * @x_old_sz: The size, in bytes, of the allocated space of ptr.
  * @x_new_sz: The new size, in bytes, of the new memory block.
