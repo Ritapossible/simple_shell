@@ -196,10 +196,10 @@ int builtin_alias(my_program_info *data);
 int builtin_env(my_program_info *data);
 
 /* create or override a variable of environment */
-int builtin_set_env(my_program_info *data);
+/* int builtin_set_env(my_program_info *data); */
 
 /* delete a variable of environment */
-int builtin_unset_env(my_program_info *data);
+/* int builtin_unset_env(my_program_info *data); */
 
 
 #endif /* SHELL_H */
