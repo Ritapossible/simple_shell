@@ -11,12 +11,8 @@
 **This simple shell is a Shell interface written in C programming language that gives to the user a prompt hsh, after it accepts, it executes a user inputted command in a separate process called child process.**
 
 
-<<<<<<< HEAD
-![c](https://camo.githubusercontent.com/4f0a611698513d0e276aa4bf9345ffe9fa05197036105d372e2d88ade23fc135/68747470733a2f2f7365656b6c6f676f2e636f6d2f696d616765732f432f632d70726f6772616d6d696e672d6c616e67756167652d6c6f676f2d394233324430313742312d7365656b6c6f676f2e636f6d2e706e67) 
-=======
 ![c](https://camo.githubusercontent.com/4f0a611698513d0e276aa4bf9345ffe9fa05197036105d372e2d88ade23fc135/68747470733a2f2f7365656b6c6f676f2e636f6d2f696d616765732f432f632d70726f6772616d6d696e672d6c616e67756167652d6c6f676f2d394233324430313742312d7365656b6c6f676f2e636f6d2e706e67)
 --- 
->>>>>>> jack
 
 ## General. 
 
@@ -37,11 +33,9 @@
 4. Next, it creates a separate child process suing fork() that performs the inputted command. Unless otherwise is specified, the parent process waits for the child to exit before continuing.
 5. After tokening the command, execve() function brings and executes it, the it frees all allocated memory with free().
 6. Finally, the program returns to main process: prints the prompt, and waits for another user input.
-<<<<<<< HEAD
+
 
 ## Flowchart Description (How it Works)
 
 ![image](https://github.com/Ritapossible/simple_shell/assets/124313160/c7b4be67-9d5d-4d1b-9867-4e19e7865224)
 
-=======
->>>>>>> jack
